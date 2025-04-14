@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation # use only if we want prenginx to be redeployed everytime nginx is deployed
 spec:
   project: default
   source:
