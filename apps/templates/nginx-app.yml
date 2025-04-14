@@ -24,4 +24,6 @@ spec:
   syncPolicy:
     automated:
       prune: true # Automatically delete resources no longer defined in Git
-      selfHeal: true # Automatically sync if live state deviates from Git-
+      selfHeal: true # Automatically sync if live state deviates from Git-defined state
+    syncOptions:
+      - CreateNamespace=true # Automatically create the destination namespace if it doesn't exist
