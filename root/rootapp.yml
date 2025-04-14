@@ -17,3 +17,7 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+  syncPolicy:
+    automated:
+      prune: true       # Automatically delete resources no longer defined in Git
+      selfHeal: true     # Automatically sync if live state deviates from Git-
